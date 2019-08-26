@@ -1,0 +1,83 @@
+/* Variable */
+:root {
+	--screen-height: 40px;
+}
+
+/* Navbar */
+.navbar {
+	background-color: #0E1736 !important;
+}
+
+/* Screen */
+.avengers-screen {
+	width: 100%;
+	height: var(--screen-height);
+	background-color: #e0e0e0;
+	display: block;
+}
+
+.avengers-screen h5 {
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 5px;
+	font-size: 18px;
+}
+
+.avengers-screen-text {
+	line-height: var(--screen-height);
+	font-weight: normal;
+}
+
+/* Seat */
+.avengers-seat {
+	cursor: pointer;
+	transition: 0.3s ease-out;
+	margin: 0 5px -10px;
+	width: 45px !important;
+}
+
+.avengers-seat:hover {
+	background: #0E1736 !important;
+	border: 1px solid #0E1736;
+}
+
+.btn-primary:hover {
+	background-color: #0058b7 !important;
+	border: 1px solid #0058b7;
+}
+
+/* Button */
+#btn-choose,
+#btn-cancel {
+	text-transform: capitalize;
+	display: none;
+	transition: 0.3s linear;
+}
+
+#btn-choose {
+	border-bottom: 4px solid #23933b;
+}
+
+#btn-cancel {
+	border-bottom: 4px solid #c9323e;
+}
+
+#btn-choose:hover {
+	background-color: #23933b !important;
+}
+
+#btn-cancel:hover {
+	background-color: #c9323e !important;
+}
+
+/* Color Description */
+.color-description-title {
+	margin-bottom: 5px;
+}
+
+.color-description {
+	display: block;
+	margin: 5px 0px;
+	text-align: center;
+	width: 77%;
+}
