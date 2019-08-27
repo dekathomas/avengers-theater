@@ -46,6 +46,20 @@
 	border: 1px solid #0058b7;
 }
 
+.not-valid {
+	cursor: default;
+}
+
+.not-valid:hover {
+	background-color: #343a40 !important;
+	border: 1px solid #343a40 !important;
+}
+
+.btn-secondary:hover {
+	background-color: #6c757d !important;
+	border: 1px solid #6c757d !important;
+}
+
 /* Button */
 #btn-choose,
 #btn-cancel {
