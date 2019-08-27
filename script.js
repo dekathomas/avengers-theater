@@ -1,12 +1,15 @@
+// Cliked variable is created to avoiod selected multiple seats
 let cliked = 0;
 let choosen_seat_id;
+let choosen_id = [];
+let newChoosenId = [];
 
 $('document').ready(function() {
 
 	// Print the seat number
 	var id = 1;
-	for(var i=0 ; i<5 ; i++) {
-		for(var j=0 ; j<10 ; j++) {
+	for(i=0 ; i<5 ; i++) {
+		for(j=0 ; j<10 ; j++) {
 			$('.avengers-main-seat').append(`
 				<p class="btn btn-primary avengers-seat" id="`+ id +`">`+ id +`</p>
 			`);
@@ -21,7 +24,9 @@ $('document').ready(function() {
 
 	// Function when you click each seats
 	$('.avengers-seat').on('click', function() {
-		if(cliked === 0) {
+		if(cliked === 0 && disable(this.id) !== 1) {
+			$('#'+ this.id +'').addClass('select');
+
 			show();
 			cliked = 1;
 			choosen_seat_id = this.id;
@@ -36,6 +41,7 @@ $('document').ready(function() {
 
 			$('#btn-choose').on('click', function() {
 				dark(choosen_seat_id);
+				$('#'+ choosen_seat_id +'').addClass('not-valid');
 
 				hide();
 				cliked = 0;
@@ -44,6 +50,16 @@ $('document').ready(function() {
 	});
 
 });
+
+// Function to disable selected seat
+function disable(id) {
+	let classList = document.getElementById(''+ id +'').className.split(/\s+/);
+	for (i=0; i<classList.length; i++) {
+		if (classList[i] === 'not-valid') {
+			return 1;
+		}
+	}
+}
 
 // Function to show the button element
 function show() {
