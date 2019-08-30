@@ -7,7 +7,7 @@ let newChoosenId = [];
 $('document').ready(function() {
 
 	// Print date time
-	let deadline = new Date("august 30, 2019 13:07:50");
+	let deadline = new Date("September 04, 2019 18:30:00");
 	let deadlineTime = deadline.getTime();
 
 	let timer = setInterval(function() {
