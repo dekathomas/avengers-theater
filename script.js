@@ -5,6 +5,8 @@ let choosen_id = [];
 let newChoosenId = [];
 
 $('document').ready(function() {
+	// Give the class name
+	$('.className').html("ALM8TY");
 
 	// Print date time
 	let deadline = new Date("October 16, 2019 18:30:00");
