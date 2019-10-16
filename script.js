@@ -8,7 +8,7 @@ $('document').ready(function() {
 
 	// Get Class Name
 	let className = prompt("Class Name", "SW49 | RHAP50DIC | DIVER59TY | ALLEGIAN7 | ALM8TY");
-	let datetime = prompt("Date Time", "September 04, 2019 18:30:00");
+	let datetime = prompt("Date Time", "October 16, 2019 18:30:00");
 
 	// Print date time
 	let deadline = new Date(""+ datetime +"");
