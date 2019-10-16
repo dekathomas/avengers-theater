@@ -5,13 +5,17 @@ let choosen_id = [];
 let newChoosenId = [];
 
 $('document').ready(function() {
-	// Give the class name
-	$(".className").html("ALM8TY");
-	console.log($(".className").val());
+
+	// Get Class Name
+	let className = prompt("Class Name", "SW49 | RHAP50DIC | DIVER59TY | ALLEGIAN7 | ALM8TY");
+	let datetime = prompt("Date Time", "September 04, 2019 18:30:00");
 
 	// Print date time
-	let deadline = new Date("October 16, 2019 18:30:00");
+	let deadline = new Date(""+ datetime +"");
 	let deadlineTime = deadline.getTime();
+
+	// Change Class Name using input data
+	$('.className').html(className);
 
 	let timer = setInterval(function() {
 		let date = new Date();
